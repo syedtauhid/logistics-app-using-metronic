@@ -1,0 +1,49 @@
+<mat-card>
+	<div class="bg-white float-right p-4 w-100">
+		<div class="button-row">
+			<button *ngIf="userId" mat-raised-button color="primary"
+					(click)="createContactPerson()">
+				Add Contact Person
+			</button>
+		</div>
+	</div>
+
+
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th scope="col">Client Id</th>
+			<th scope="col">Created At</th>
+			<th scope="col">Description</th>
+			<th scope="col">Email</th>
+			<th scope="col">Actions</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr *ngFor="let contactPerson of contactPersons; index as i">
+			<td>{{ contactPerson.clientId }}</td>
+			<td>{{ contactPerson.createdAt }}</td>
+			<td>{{ contactPerson.description }}</td>
+			<td>{{ contactPerson.email }}</td>
+			<td>
+				<ng-template ngxPermissionsOnly="canEditECommerceData">
+					<button mat-icon-button color="primary" (click)="editContactPerson(contactPerson._id)" matTooltip="Edit Contact Person">
+						<mat-icon>create</mat-icon>
+					</button>&nbsp;
+				</ng-template>
+
+				<ng-template ngxPermissionsOnly="canDeleteECommerceData">
+					<button mat-icon-button
+							(click)="deleteContactPerson(contactPerson._id)"
+							color="warn"
+							matTooltip="Delete customer"
+							type="button">
+						<mat-icon>delete</mat-icon>
+					</button>&nbsp;
+				</ng-template>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+</mat-card>

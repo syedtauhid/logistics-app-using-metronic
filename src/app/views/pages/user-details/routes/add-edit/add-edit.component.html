@@ -1,0 +1,75 @@
+<mat-card>
+	<i class="fas fa-arrow-left" style="cursor: pointer" (click)="goBack()"><span class="ml-2">Back</span></i>
+	<div class="row mt-2">
+		<form class="kt-form kt-form--label-right" style="width: 100%" #createRouteForm="ngForm">
+			<div class="kt-portlet__body">
+				<div class="form-group row">
+					<div class="col-lg-4 mb-2">
+						<label for="routeNumber">Route Number</label>
+						<input type="number" [(ngModel)]="route.routeNumber" class="form-control" name="routeNumber" id="routeNumber"
+							   placeholder="Route Number">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="description">Description</label>
+						<input type="text" [(ngModel)]="route.description" class="form-control" name="description" id="description"
+							   placeholder="Description">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="clientPrice">Client Price</label>
+						<input type="text" [(ngModel)]="route.clientPrice" class="form-control" name="clientPrice" id="clientPrice"
+							   placeholder="Client Price">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="priceBasis">Price Basis</label>
+						<input type="text" [(ngModel)]="route.priceBasis" class="form-control" name="priceBasis" id="priceBasis"
+							   placeholder="Price Basis">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="tourType">Tour Type</label>
+						<input type="text" [(ngModel)]="route.tourType" class="form-control" name="tourType" id="tourType"
+							   placeholder="Tour Type">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="comment">Comment</label>
+						<input type="text" [(ngModel)]="route.comment" class="form-control" name="comment" id="comment"
+							   placeholder="Comment">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="validFrom">Valid From</label>
+						<input type="date" [(ngModel)]="route.validFrom" class="form-control" name="validFrom" id="validFrom"
+							   placeholder="Valid From">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="validTo">Valid To</label>
+						<input type="date" [(ngModel)]="route.validTo" class="form-control" name="validTo" id="validTo"
+							   placeholder="Valid To">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="contractor">Contractor</label>
+						<input type="text" [(ngModel)]="route.contractor" class="form-control" name="contractor" id="contractor"
+							   placeholder="Contractor">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="contractorPriceWeek">Contractor Price Week</label>
+						<input type="number" [(ngModel)]="route.contractorPriceWeek" class="form-control" name="contractorPriceWeek" id="contractorPriceWeek"
+							   placeholder="Contractor Price Week">
+					</div>
+					<div class="col-lg-4 mb-2">
+						<label for="contractorPriceWeekend">Contractor PMC Weekend</label>
+						<input type="number" [(ngModel)]="route.contractorPriceWeekend" class="form-control" name="contractorPriceWeekend" id="contractorPriceWeekend"
+							   placeholder="Contractor PMC Weekend">
+					</div>
+				</div>
+			</div>
+			<div class="kt-portlet__foot">
+				<div class="kt-form__actions p-0">
+					<div class="row">
+						<div class="col-lg-12">
+							<button type="button" (click)="submitt(createRouteForm)" class="btn btn-primary float-right" >Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</mat-card>

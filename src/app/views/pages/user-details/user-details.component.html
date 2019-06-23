@@ -1,0 +1,27 @@
+<mat-card-content>
+	<mat-tab-group class="demo-tab-group">
+		<mat-tab label="{{'Overview' | translate}}">
+			<div class="demo-tab-content">
+				<kt-overview [user]="user" [ifCreate]="false"></kt-overview>
+			</div>
+		</mat-tab>
+		<mat-tab label="{{'Contact Person' | translate}}">
+			<div class="demo-tab-content">
+				<kt-contact-person></kt-contact-person>
+			</div>
+		</mat-tab>
+		<mat-tab label="{{'Comments' | translate}}">
+			<div class="demo-tab-content">
+				<kt-comments [userComments]="userComments"
+							 [saved]="saved"
+							 (comments)="commentsChanged($event)"></kt-comments>
+			</div>
+		</mat-tab>
+
+		<mat-tab label="{{'Routes' | translate}}">
+			<div class="demo-tab-content">
+				<kt-routes [id]="userId"></kt-routes>
+			</div>
+		</mat-tab>
+	</mat-tab-group>
+</mat-card-content>

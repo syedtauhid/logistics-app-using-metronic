@@ -1,0 +1,94 @@
+<mat-card>
+	<i class="fas fa-arrow-left" style="cursor: pointer" (click)="goBack()"><span class="ml-2">Back</span></i>
+
+	<form class="kt-form kt-form--label-right mt-2" #contactPersonForm="ngForm" (submit)="submit(contactPersonForm)">
+		<div class="kt-portlet__body">
+			<div class="form-group row">
+				<div class="col-lg-4 mb-2">
+					<label for="title">
+						Title
+						<!--					{{ 'title' | translate }}-->
+					</label>
+					<input type="text"
+						   class="form-control"
+						   [(ngModel)]="contactPerson.title"
+						   name="title"
+						   id="title"
+						   placeholder="{{ 'title' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="firstName">
+						FirstName
+						<!--					{{ 'firstName' | translate }}-->
+					</label>
+					<input type="text" class="form-control"
+						   [(ngModel)]="contactPerson.firstName" name="firstName" id="firstName"
+						   placeholder="{{ 'firstName' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="name">
+						Name
+						<!--					{{ 'name' | translate }}-->
+					</label>
+					<input type="text" class="form-control" [(ngModel)]="contactPerson.name" name="name"
+						   id="name" placeholder="{{ 'name' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="department">
+						Department
+						<!--					{{ 'department' | translate }}-->
+					</label>
+					<input type="text" class="form-control"
+						   [(ngModel)]="contactPerson.department"
+						   name="department" id="department" placeholder="{{ 'department' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="phone">
+						Phone
+						<!--					{{ 'phone' | translate }}-->
+					</label>
+					<input type="text" class="form-control" [(ngModel)]="contactPerson.phone"
+						   name="phone" id="phone" placeholder="{{ 'phone' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="mobileNumber">Mobile Number
+						<!--					{{ 'mobileNumber' | translate }}-->
+					</label>
+					<input type="text" class="form-control" [(ngModel)]="contactPerson.mobileNumber"
+						   name="mobileNumber" id="mobileNumber" placeholder="{{ 'mobileNumber' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="mobileNumber">Fax
+						<!--					{{ 'fax' | translate }}-->
+					</label>
+					<input type="text" class="form-control" [(ngModel)]="contactPerson.fax"
+						   name="fax" id="fax" placeholder="{{ 'fax' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="email">Email
+						<!--					{{ 'email' | translate }}-->
+					</label>
+					<input type="email" class="form-control" [(ngModel)]="contactPerson.email"
+						   name="email" id="email" placeholder="{{ 'email' | translate }}">
+				</div>
+				<div class="col-lg-4 mb-2">
+					<label for="comment">Comment
+						<!--					{{ 'comment' | translate }}-->
+					</label>
+					<input type="comment" class="form-control" [(ngModel)]="contactPerson.comment"
+						   name="comment" id="comment" placeholder="{{ 'comment' | translate }}">
+				</div>
+			</div>
+		</div>
+		<div class="kt-portlet__foot">
+			<div class="kt-form__actions p-0">
+				<div class="row">
+					<div class="col-lg-12">
+						<button type="submit" class="btn btn-primary float-right">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</mat-card>
+

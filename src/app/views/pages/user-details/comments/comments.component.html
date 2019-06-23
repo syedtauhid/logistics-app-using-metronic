@@ -1,0 +1,28 @@
+<mat-card>
+	<form class="kt-form kt-form--label-right" #commentsForm="ngForm" >
+		<div class="kt-portlet__body">
+			<div class="form-group row">
+				<div class="col-lg-12 mb-2">
+				<textarea class="form-control"
+						  [(ngModel)]="_userComments"
+						  name="comments"
+						  id="comments"
+						  placeholder="{{ 'comments' | translate }}">
+				</textarea>
+					<div *ngIf="savEd" class="text-success mt-4">
+						<h5>Saved</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="kt-portlet__foot">
+			<div class="kt-form__actions p-0">
+				<div class="row">
+					<div class="col-lg-12">
+						<button type="button" (click)="submit(commentsForm)" class="btn btn-primary float-right">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</mat-card>
